@@ -29,17 +29,17 @@ namespace MelodyMusicSystem
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtFirstName = new System.Windows.Forms.TextBox();
+            this.txtFName = new System.Windows.Forms.TextBox();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.lblRegNo = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.txtLastName = new System.Windows.Forms.TextBox();
+            this.cboRegNo = new System.Windows.Forms.ComboBox();
+            this.txtLName = new System.Windows.Forms.TextBox();
             this.lblLastName = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblDOB = new System.Windows.Forms.Label();
-            this.dobPicker = new System.Windows.Forms.DateTimePicker();
+            this.dtpDOB = new System.Windows.Forms.DateTimePicker();
             this.txtContact = new System.Windows.Forms.TextBox();
             this.lblContact = new System.Windows.Forms.Label();
             this.txtAge = new System.Windows.Forms.TextBox();
@@ -51,13 +51,13 @@ namespace MelodyMusicSystem
             this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // txtFirstName
+            // txtFName
             // 
-            this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.Location = new System.Drawing.Point(148, 114);
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(149, 31);
-            this.txtFirstName.TabIndex = 10;
+            this.txtFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFName.Location = new System.Drawing.Point(148, 114);
+            this.txtFName.Name = "txtFName";
+            this.txtFName.Size = new System.Drawing.Size(149, 31);
+            this.txtFName.TabIndex = 10;
             // 
             // lblFirstName
             // 
@@ -89,22 +89,22 @@ namespace MelodyMusicSystem
             this.lblTitle.TabIndex = 11;
             this.lblTitle.Text = "Student Form";
             // 
-            // comboBox1
+            // cboRegNo
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(148, 71);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(149, 32);
-            this.comboBox1.TabIndex = 12;
+            this.cboRegNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboRegNo.FormattingEnabled = true;
+            this.cboRegNo.Location = new System.Drawing.Point(148, 71);
+            this.cboRegNo.Name = "cboRegNo";
+            this.cboRegNo.Size = new System.Drawing.Size(149, 32);
+            this.cboRegNo.TabIndex = 12;
             // 
-            // txtLastName
+            // txtLName
             // 
-            this.txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastName.Location = new System.Drawing.Point(148, 164);
-            this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(149, 31);
-            this.txtLastName.TabIndex = 14;
+            this.txtLName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLName.Location = new System.Drawing.Point(148, 164);
+            this.txtLName.Name = "txtLName";
+            this.txtLName.Size = new System.Drawing.Size(149, 31);
+            this.txtLName.TabIndex = 14;
             // 
             // lblLastName
             // 
@@ -117,13 +117,13 @@ namespace MelodyMusicSystem
             this.lblLastName.Text = "Last Name:";
             this.lblLastName.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox2
+            // txtAddress
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(148, 214);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(149, 31);
-            this.textBox2.TabIndex = 16;
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(148, 214);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(149, 31);
+            this.txtAddress.TabIndex = 16;
             // 
             // lblAddress
             // 
@@ -145,14 +145,14 @@ namespace MelodyMusicSystem
             this.lblDOB.TabIndex = 17;
             this.lblDOB.Text = "DOB:";
             // 
-            // dobPicker
+            // dtpDOB
             // 
-            this.dobPicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dobPicker.Location = new System.Drawing.Point(148, 270);
-            this.dobPicker.Name = "dobPicker";
-            this.dobPicker.Size = new System.Drawing.Size(149, 20);
-            this.dobPicker.TabIndex = 18;
-            this.dobPicker.ValueChanged += new System.EventHandler(this.dobPicker_ValueChanged);
+            this.dtpDOB.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDOB.Location = new System.Drawing.Point(148, 270);
+            this.dtpDOB.Name = "dtpDOB";
+            this.dtpDOB.Size = new System.Drawing.Size(149, 20);
+            this.dtpDOB.TabIndex = 18;
+            this.dtpDOB.ValueChanged += new System.EventHandler(this.dobPicker_ValueChanged);
             // 
             // txtContact
             // 
@@ -254,15 +254,15 @@ namespace MelodyMusicSystem
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.txtContact);
             this.Controls.Add(this.lblContact);
-            this.Controls.Add(this.dobPicker);
+            this.Controls.Add(this.dtpDOB);
             this.Controls.Add(this.lblDOB);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.lblAddress);
-            this.Controls.Add(this.txtLastName);
+            this.Controls.Add(this.txtLName);
             this.Controls.Add(this.lblLastName);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboRegNo);
             this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.txtFirstName);
+            this.Controls.Add(this.txtFName);
             this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.lblRegNo);
             this.Name = "frmStudent";
@@ -274,17 +274,17 @@ namespace MelodyMusicSystem
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtFirstName;
+        private System.Windows.Forms.TextBox txtFName;
         private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.Label lblRegNo;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox txtLastName;
+        private System.Windows.Forms.ComboBox cboRegNo;
+        private System.Windows.Forms.TextBox txtLName;
         private System.Windows.Forms.Label lblLastName;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblDOB;
-        private System.Windows.Forms.DateTimePicker dobPicker;
+        private System.Windows.Forms.DateTimePicker dtpDOB;
         private System.Windows.Forms.TextBox txtContact;
         private System.Windows.Forms.Label lblContact;
         private System.Windows.Forms.TextBox txtAge;

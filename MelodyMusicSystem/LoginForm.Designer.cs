@@ -33,8 +33,8 @@ namespace MelodyMusicSystem
             System.Windows.Forms.Button btnCancel;
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
             btnSubmit = new System.Windows.Forms.Button();
             btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -48,6 +48,18 @@ namespace MelodyMusicSystem
             btnSubmit.TabIndex = 2;
             btnSubmit.Text = "Submit";
             btnSubmit.UseVisualStyleBackColor = true;
+            btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // btnCancel
+            // 
+            btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnCancel.Location = new System.Drawing.Point(265, 196);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new System.Drawing.Size(104, 39);
+            btnCancel.TabIndex = 7;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lblUsername
             // 
@@ -69,31 +81,21 @@ namespace MelodyMusicSystem
             this.lblPassword.TabIndex = 4;
             this.lblPassword.Text = "Password";
             // 
-            // txtUsername
+            // txtUser
             // 
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(198, 76);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(149, 31);
-            this.txtUsername.TabIndex = 5;
+            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.Location = new System.Drawing.Point(198, 76);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(149, 31);
+            this.txtUser.TabIndex = 5;
             // 
-            // txtPassword
+            // txtPass
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(198, 119);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(149, 31);
-            this.txtPassword.TabIndex = 6;
-            // 
-            // btnCancel
-            // 
-            btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            btnCancel.Location = new System.Drawing.Point(265, 196);
-            btnCancel.Name = "btnCancel";
-            btnCancel.Size = new System.Drawing.Size(104, 39);
-            btnCancel.TabIndex = 7;
-            btnCancel.Text = "Submit";
-            btnCancel.UseVisualStyleBackColor = true;
+            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Location = new System.Drawing.Point(198, 119);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(149, 31);
+            this.txtPass.TabIndex = 6;
             // 
             // LoginForm
             // 
@@ -101,8 +103,8 @@ namespace MelodyMusicSystem
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(481, 289);
             this.Controls.Add(btnCancel);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.txtPass);
+            this.Controls.Add(this.txtUser);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(btnSubmit);
@@ -117,7 +119,7 @@ namespace MelodyMusicSystem
 
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.TextBox txtPass;
     }
 }

@@ -29,8 +29,10 @@ namespace MelodyMusicSystem
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblLoading = new System.Windows.Forms.Label();
-            this.proBar = new System.Windows.Forms.ProgressBar();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // lblLoading
@@ -43,21 +45,25 @@ namespace MelodyMusicSystem
             this.lblLoading.TabIndex = 4;
             this.lblLoading.Text = "Loading....";
             // 
-            // proBar
+            // progressBar1
             // 
-            this.proBar.Location = new System.Drawing.Point(33, 90);
-            this.proBar.Name = "proBar";
-            this.proBar.Size = new System.Drawing.Size(324, 38);
-            this.proBar.TabIndex = 5;
+            this.progressBar1.Location = new System.Drawing.Point(33, 90);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(324, 38);
+            this.progressBar1.TabIndex = 5;
             // 
-            // Form2
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // LoadingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(382, 173);
-            this.Controls.Add(this.proBar);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.lblLoading);
-            this.Name = "Form2";
+            this.Name = "LoadingForm";
             this.Text = "Loading Form";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -67,6 +73,7 @@ namespace MelodyMusicSystem
         #endregion
 
         private System.Windows.Forms.Label lblLoading;
-        private System.Windows.Forms.ProgressBar proBar;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
