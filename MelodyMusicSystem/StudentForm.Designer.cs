@@ -97,6 +97,7 @@ namespace MelodyMusicSystem
             this.cboRegNo.Name = "cboRegNo";
             this.cboRegNo.Size = new System.Drawing.Size(149, 32);
             this.cboRegNo.TabIndex = 12;
+            this.cboRegNo.SelectedIndexChanged += new System.EventHandler(this.cboRegNo_SelectedIndexChanged);
             // 
             // txtLName
             // 
@@ -115,7 +116,6 @@ namespace MelodyMusicSystem
             this.lblLastName.Size = new System.Drawing.Size(114, 24);
             this.lblLastName.TabIndex = 13;
             this.lblLastName.Text = "Last Name:";
-            this.lblLastName.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtAddress
             // 
@@ -152,7 +152,7 @@ namespace MelodyMusicSystem
             this.dtpDOB.Name = "dtpDOB";
             this.dtpDOB.Size = new System.Drawing.Size(149, 20);
             this.dtpDOB.TabIndex = 18;
-            this.dtpDOB.ValueChanged += new System.EventHandler(this.dobPicker_ValueChanged);
+           
             // 
             // txtContact
             // 
@@ -220,6 +220,7 @@ namespace MelodyMusicSystem
             this.btnDelete.TabIndex = 25;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+           
             // 
             // btnClear
             // 
@@ -230,7 +231,7 @@ namespace MelodyMusicSystem
             this.btnClear.TabIndex = 26;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click_1);
+       
             // 
             // btnExit
             // 
@@ -241,7 +242,7 @@ namespace MelodyMusicSystem
             this.btnExit.TabIndex = 27;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
+        
             // 
             // frmStudent
             // 
