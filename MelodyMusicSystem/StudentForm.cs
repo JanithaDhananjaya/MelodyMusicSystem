@@ -34,7 +34,7 @@ namespace MelodyMusicSystem
             SqlCommand comm = new SqlCommand(commandString, conn);
             conn.Open();
             comm.ExecuteNonQuery();
-            MessageBox.Show("Record Added Successfully");
+            MessageBox.Show("New Student is Added Successfully");
             cboRegNo.Items.Add(cboRegNo.Text);
             Clear();
             cboRegNo.Focus();
@@ -51,7 +51,7 @@ namespace MelodyMusicSystem
                             txtAddress.Text + "', DOB = '" + dtpDOB.Text + "', Contact = '" +
                             txtContact.Text + "',Age='" + txtAge.Text + "' where RegNo = '" +
                             cboRegNo.Text + "'";
-            if (MessageBox.Show("Are you sure, you want to Update this record?", "Sure?", MessageBoxButtons.YesNo) ==
+            if (MessageBox.Show("Are you sure, you want to Update this student?", "Sure?", MessageBoxButtons.YesNo) ==
                 DialogResult.No)
             {
                 return;
@@ -61,7 +61,7 @@ namespace MelodyMusicSystem
             SqlCommand comm = new SqlCommand(commandString, conn);
             conn.Open();
             comm.ExecuteNonQuery();
-            MessageBox.Show("Record Updated Succesfully");
+            MessageBox.Show("Student details is Updated Succesfully");
             Clear();
             cboRegNo.Focus();
             conn.Close();
@@ -94,15 +94,14 @@ namespace MelodyMusicSystem
             reader.Close();
             conn.Close();
         }
-
-
+        
         private void btnDelete_Click(object sender, EventArgs e)
         {
             string connectionString, commandString;
             connectionString =
                 "Data Source=DESKTOP-OCRRRLB\\SQLEXPRESS;Initial Catalog=Melody;Integrated Security=True";
             commandString = "DELETE Student FROM Student where Student.RegNo = '" + cboRegNo.Text + "'";
-            if (MessageBox.Show("Are you sure, you want to delete this record?", "Sure?", MessageBoxButtons.YesNo) ==
+            if (MessageBox.Show("Are you sure, you want to delete this student?", "Sure?", MessageBoxButtons.YesNo) ==
                 DialogResult.No)
             {
                 return;
@@ -112,7 +111,7 @@ namespace MelodyMusicSystem
             SqlCommand comm = new SqlCommand(commandString, conn);
             conn.Open();
             comm.ExecuteNonQuery();
-            MessageBox.Show("Record Deleted Successfully");
+            MessageBox.Show("Student is Deleted Successfully");
             conn.Close();
             cboRegNo.Items.Remove(cboRegNo.Text);
             cboRegNo.Focus();
@@ -133,6 +132,7 @@ namespace MelodyMusicSystem
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+            new Home().Show();
         }
 
         private void btnClear_Click(object sender, EventArgs e)

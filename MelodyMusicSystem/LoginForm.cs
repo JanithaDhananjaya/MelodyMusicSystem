@@ -44,10 +44,10 @@ namespace MelodyMusicSystem
                 // LoadingForm loadingForm = new LoadingForm();
                 // loadingForm.Show();
                 // this.Hide();
-                
-                frmStudent fr = new frmStudent();
+
+                Home home = new Home();
                 this.Hide();
-                fr.Show();
+                home.Show();
             }
             else
             {
