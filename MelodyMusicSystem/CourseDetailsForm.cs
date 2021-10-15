@@ -55,7 +55,7 @@ namespace MelodyMusicSystem
 
             commandString = "INSERT INTO Course VALUES ('" +
                             cboCOID.Text + "','" + txtCName.Text + "','" + txtDivision.Text + "','"
-                            + "','" + txtDuration.Text + "','" + txtFee.Text + "')";
+                            + txtDuration.Text + "','" + txtFee.Text + "')";
 
             SqlConnection conn = new SqlConnection(connectionString);
             SqlCommand comm = new SqlCommand(commandString, conn);

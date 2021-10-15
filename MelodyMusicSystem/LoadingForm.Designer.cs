@@ -38,7 +38,7 @@ namespace MelodyMusicSystem
             // lblLoading
             // 
             this.lblLoading.AutoSize = true;
-            this.lblLoading.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoading.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblLoading.Location = new System.Drawing.Point(29, 49);
             this.lblLoading.Name = "lblLoading";
             this.lblLoading.Size = new System.Drawing.Size(109, 24);
@@ -54,6 +54,7 @@ namespace MelodyMusicSystem
             // 
             // timer1
             // 
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // LoadingForm
@@ -67,7 +68,6 @@ namespace MelodyMusicSystem
             this.Text = "Loading Form";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
