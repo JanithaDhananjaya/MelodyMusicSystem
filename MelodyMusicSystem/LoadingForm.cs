@@ -27,9 +27,9 @@ namespace MelodyMusicSystem
             else
             {
                 timer1.Enabled = false;
-                frmStudent fr = new frmStudent();
+                Home home = new Home();
                 this.Hide();
-                fr.Show();
+                home.Show();
             }
         }
     }

@@ -56,7 +56,7 @@ namespace MelodyMusicSystem
             this.txtFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtFName.Location = new System.Drawing.Point(148, 114);
             this.txtFName.Name = "txtFName";
-            this.txtFName.Size = new System.Drawing.Size(149, 31);
+            this.txtFName.Size = new System.Drawing.Size(180, 31);
             this.txtFName.TabIndex = 10;
             // 
             // lblFirstName
@@ -83,7 +83,8 @@ namespace MelodyMusicSystem
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lblTitle.Location = new System.Drawing.Point(120, 18);
+            this.lblTitle.ForeColor = System.Drawing.Color.MediumBlue;
+            this.lblTitle.Location = new System.Drawing.Point(130, 18);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(136, 24);
             this.lblTitle.TabIndex = 11;
@@ -95,7 +96,7 @@ namespace MelodyMusicSystem
             this.cboRegNo.FormattingEnabled = true;
             this.cboRegNo.Location = new System.Drawing.Point(148, 71);
             this.cboRegNo.Name = "cboRegNo";
-            this.cboRegNo.Size = new System.Drawing.Size(149, 32);
+            this.cboRegNo.Size = new System.Drawing.Size(180, 32);
             this.cboRegNo.TabIndex = 12;
             this.cboRegNo.SelectedIndexChanged += new System.EventHandler(this.cboRegNo_SelectedIndexChanged);
             // 
@@ -104,7 +105,7 @@ namespace MelodyMusicSystem
             this.txtLName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtLName.Location = new System.Drawing.Point(148, 164);
             this.txtLName.Name = "txtLName";
-            this.txtLName.Size = new System.Drawing.Size(149, 31);
+            this.txtLName.Size = new System.Drawing.Size(180, 31);
             this.txtLName.TabIndex = 14;
             // 
             // lblLastName
@@ -122,7 +123,7 @@ namespace MelodyMusicSystem
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtAddress.Location = new System.Drawing.Point(148, 214);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(149, 31);
+            this.txtAddress.Size = new System.Drawing.Size(180, 31);
             this.txtAddress.TabIndex = 16;
             // 
             // lblAddress
@@ -150,16 +151,15 @@ namespace MelodyMusicSystem
             this.dtpDOB.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.dtpDOB.Location = new System.Drawing.Point(148, 270);
             this.dtpDOB.Name = "dtpDOB";
-            this.dtpDOB.Size = new System.Drawing.Size(149, 20);
+            this.dtpDOB.Size = new System.Drawing.Size(180, 20);
             this.dtpDOB.TabIndex = 18;
-           
             // 
             // txtContact
             // 
             this.txtContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtContact.Location = new System.Drawing.Point(148, 310);
             this.txtContact.Name = "txtContact";
-            this.txtContact.Size = new System.Drawing.Size(149, 31);
+            this.txtContact.Size = new System.Drawing.Size(180, 31);
             this.txtContact.TabIndex = 20;
             // 
             // lblContact
@@ -177,7 +177,7 @@ namespace MelodyMusicSystem
             this.txtAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtAge.Location = new System.Drawing.Point(148, 364);
             this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(149, 31);
+            this.txtAge.Size = new System.Drawing.Size(180, 31);
             this.txtAge.TabIndex = 22;
             // 
             // lblAge
@@ -192,64 +192,69 @@ namespace MelodyMusicSystem
             // 
             // btnAdd
             // 
+            this.btnAdd.BackColor = System.Drawing.Color.LimeGreen;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnAdd.Location = new System.Drawing.Point(25, 430);
+            this.btnAdd.Location = new System.Drawing.Point(45, 430);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(89, 42);
             this.btnAdd.TabIndex = 23;
             this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 
+            this.btnUpdate.BackColor = System.Drawing.Color.Turquoise;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnUpdate.Location = new System.Drawing.Point(134, 430);
+            this.btnUpdate.Location = new System.Drawing.Point(154, 430);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(89, 42);
             this.btnUpdate.TabIndex = 24;
             this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
+            this.btnDelete.BackColor = System.Drawing.Color.Red;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnDelete.Location = new System.Drawing.Point(239, 430);
+            this.btnDelete.Location = new System.Drawing.Point(259, 430);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(89, 42);
             this.btnDelete.TabIndex = 25;
             this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClear
             // 
+            this.btnClear.BackColor = System.Drawing.Color.SandyBrown;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnClear.Location = new System.Drawing.Point(67, 495);
+            this.btnClear.Location = new System.Drawing.Point(94, 493);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(89, 42);
             this.btnClear.TabIndex = 26;
             this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnExit
             // 
+            this.btnExit.BackColor = System.Drawing.Color.SteelBlue;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnExit.Location = new System.Drawing.Point(186, 495);
+            this.btnExit.Location = new System.Drawing.Point(213, 493);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(89, 42);
             this.btnExit.TabIndex = 27;
             this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // frmStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(397, 566);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnClear);

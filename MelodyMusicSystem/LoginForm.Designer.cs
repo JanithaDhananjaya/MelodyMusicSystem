@@ -41,30 +41,32 @@ namespace MelodyMusicSystem
             // 
             // btnSubmit
             // 
-            btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnSubmit.BackColor = System.Drawing.Color.LimeGreen;
+            btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             btnSubmit.Location = new System.Drawing.Point(145, 196);
             btnSubmit.Name = "btnSubmit";
             btnSubmit.Size = new System.Drawing.Size(104, 39);
             btnSubmit.TabIndex = 2;
             btnSubmit.Text = "Submit";
-            btnSubmit.UseVisualStyleBackColor = true;
+            btnSubmit.UseVisualStyleBackColor = false;
             btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // btnCancel
             // 
-            btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnCancel.BackColor = System.Drawing.Color.Salmon;
+            btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             btnCancel.Location = new System.Drawing.Point(265, 196);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new System.Drawing.Size(104, 39);
             btnCancel.TabIndex = 7;
             btnCancel.Text = "Cancel";
-            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.UseVisualStyleBackColor = false;
             btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblUsername.Location = new System.Drawing.Point(71, 76);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(105, 24);
@@ -74,7 +76,7 @@ namespace MelodyMusicSystem
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblPassword.Location = new System.Drawing.Point(71, 123);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(100, 24);
@@ -83,7 +85,7 @@ namespace MelodyMusicSystem
             // 
             // txtUser
             // 
-            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtUser.Location = new System.Drawing.Point(198, 76);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(149, 31);
@@ -91,7 +93,7 @@ namespace MelodyMusicSystem
             // 
             // txtPass
             // 
-            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtPass.Location = new System.Drawing.Point(198, 119);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(149, 31);
@@ -101,6 +103,7 @@ namespace MelodyMusicSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(481, 289);
             this.Controls.Add(btnCancel);
             this.Controls.Add(this.txtPass);
@@ -112,7 +115,6 @@ namespace MelodyMusicSystem
             this.Text = "Login Form";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

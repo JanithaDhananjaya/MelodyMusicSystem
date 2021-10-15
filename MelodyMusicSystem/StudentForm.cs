@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,6 +14,8 @@ namespace MelodyMusicSystem
 {
     public partial class frmStudent : Form
     {
+        private Regex numbersOnlyRegX = new Regex("^[0-9]+$");
+
         public frmStudent()
         {
             InitializeComponent();
@@ -21,6 +24,13 @@ namespace MelodyMusicSystem
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            
+            var validateFields = this.ValidateFields();
+            if (!validateFields)
+            {
+                return;
+            }
+            
             string connectionString, commandString;
             connectionString =
                 "Data Source=DESKTOP-OCRRRLB\\SQLEXPRESS;Initial Catalog=Melody;Integrated Security=True";
@@ -43,6 +53,12 @@ namespace MelodyMusicSystem
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            var validateFields = this.ValidateFields();
+            if (!validateFields)
+            {
+                return;
+            }
+
             string connectionString, commandString;
             connectionString =
                 "Data Source=DESKTOP-OCRRRLB\\SQLEXPRESS;Initial Catalog=Melody;Integrated Security=True";
@@ -94,7 +110,7 @@ namespace MelodyMusicSystem
             reader.Close();
             conn.Close();
         }
-        
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
             string connectionString, commandString;
@@ -127,6 +143,32 @@ namespace MelodyMusicSystem
             dtpDOB.Value = System.DateTime.Now;
             txtContact.Text = "";
             txtAge.Text = "";
+        }
+
+        private bool ValidateFields()
+        {
+            if (cboRegNo.Text == "" || txtFName.Text == "" || txtLName.Text == "" || txtAddress.Text == "" ||
+                dtpDOB.Text == "" || txtContact.Text == "" || txtAge.Text == "")
+            {
+                MessageBox.Show("Please fill all fields", "Warning!");
+                return false;
+            }
+
+            if (numbersOnlyRegX.IsMatch(txtContact.Text.Trim()) == false || txtContact.Text.Length != 10)
+            {
+                MessageBox.Show("Invalid Mobile Number !!");
+                txtContact.Focus();
+                return false;
+            }
+            
+            if (numbersOnlyRegX.IsMatch(txtAge.Text.Trim()) == false)
+            {
+                MessageBox.Show("Invalid Age !!");
+                txtContact.Focus();
+                return false;
+            }
+            
+            return true;
         }
 
         private void btnExit_Click(object sender, EventArgs e)

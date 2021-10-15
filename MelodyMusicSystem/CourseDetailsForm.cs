@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,6 +14,9 @@ namespace MelodyMusicSystem
 {
     public partial class CourseDetailsForm : Form
     {
+        
+        private Regex numbersOnlyRegX = new Regex("^[0-9]+$");
+        
         public CourseDetailsForm()
         {
             InitializeComponent();
@@ -49,6 +53,13 @@ namespace MelodyMusicSystem
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            
+            var validateFields = this.ValidateFields();
+            if (!validateFields)
+            {
+                return;
+            }
+            
             string connectionString, commandString;
             connectionString =
                 "Data Source=DESKTOP-OCRRRLB\\SQLEXPRESS;Initial Catalog=Melody;Integrated Security=True";
@@ -70,6 +81,13 @@ namespace MelodyMusicSystem
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            
+            var validateFields = this.ValidateFields();
+            if (!validateFields)
+            {
+                return;
+            }
+            
             string connectionString, commandString;
             connectionString =
                 "Data Source=DESKTOP-OCRRRLB\\SQLEXPRESS;Initial Catalog=Melody;Integrated Security=True";
@@ -166,6 +184,32 @@ namespace MelodyMusicSystem
             txtDivision.Text = "";
             txtDuration.Text = "";
             txtFee.Text = "";
+        }
+        
+        private bool ValidateFields()
+        {
+            if (cboCOID.Text == "" || txtCName.Text == "" || txtDivision.Text == "" || txtDuration.Text == "" ||
+                txtFee.Text == "")
+            {
+                MessageBox.Show("Please fill all fields", "Warning!");
+                return false;
+            }
+            
+            if (numbersOnlyRegX.IsMatch(txtDuration.Text.Trim()) == false)
+            {
+                MessageBox.Show("Invalid Duration !!");
+                txtDuration.Focus();
+                return false;
+            }
+
+            if (numbersOnlyRegX.IsMatch(txtFee.Text.Trim()) == false)
+            {
+                MessageBox.Show("Invalid Fee !!");
+                txtFee.Focus();
+                return false;
+            }
+
+            return true;
         }
     }
 }

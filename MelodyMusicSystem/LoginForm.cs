@@ -41,13 +41,9 @@ namespace MelodyMusicSystem
             else if (txtUser.Text == "User" && txtPass.Text == "User123")
             {
                 MessageBox.Show("Valid Username or Passoword");
-                // LoadingForm loadingForm = new LoadingForm();
-                // loadingForm.Show();
-                // this.Hide();
-
-                Home home = new Home();
+                LoadingForm loadingForm = new LoadingForm();
+                loadingForm.Show();
                 this.Hide();
-                home.Show();
             }
             else
             {

@@ -40,6 +40,7 @@ namespace MelodyMusicSystem
             // lblTitle
             // 
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.MediumBlue;
             this.lblTitle.Location = new System.Drawing.Point(105, 24);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(101, 47);
@@ -48,35 +49,38 @@ namespace MelodyMusicSystem
             // 
             // btnStudent
             // 
+            this.btnStudent.BackColor = System.Drawing.Color.DarkOrange;
             this.btnStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnStudent.Location = new System.Drawing.Point(83, 127);
             this.btnStudent.Name = "btnStudent";
             this.btnStudent.Size = new System.Drawing.Size(164, 55);
             this.btnStudent.TabIndex = 1;
             this.btnStudent.Text = "Stuednt";
-            this.btnStudent.UseVisualStyleBackColor = true;
+            this.btnStudent.UseVisualStyleBackColor = false;
             this.btnStudent.Click += new System.EventHandler(this.btnStudent_Click);
             // 
             // btnCourse
             // 
+            this.btnCourse.BackColor = System.Drawing.Color.DarkOrange;
             this.btnCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnCourse.Location = new System.Drawing.Point(83, 212);
             this.btnCourse.Name = "btnCourse";
             this.btnCourse.Size = new System.Drawing.Size(164, 55);
             this.btnCourse.TabIndex = 2;
             this.btnCourse.Text = "Course";
-            this.btnCourse.UseVisualStyleBackColor = true;
+            this.btnCourse.UseVisualStyleBackColor = false;
             this.btnCourse.Click += new System.EventHandler(this.btnCourse_Click);
             // 
             // btnPayment
             // 
+            this.btnPayment.BackColor = System.Drawing.Color.DarkOrange;
             this.btnPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnPayment.Location = new System.Drawing.Point(83, 309);
             this.btnPayment.Name = "btnPayment";
             this.btnPayment.Size = new System.Drawing.Size(164, 55);
             this.btnPayment.TabIndex = 3;
             this.btnPayment.Text = "Payment";
-            this.btnPayment.UseVisualStyleBackColor = true;
+            this.btnPayment.UseVisualStyleBackColor = false;
             this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
             // Home
