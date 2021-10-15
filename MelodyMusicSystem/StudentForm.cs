@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MelodyMusicSystem
 {
+    /**
+     * created by :  D.T.S.De Silva
+     * Registration no - 00067705
+     */
     public partial class frmStudent : Form
     {
         private Regex numbersOnlyRegX = new Regex("^[0-9]+$");
