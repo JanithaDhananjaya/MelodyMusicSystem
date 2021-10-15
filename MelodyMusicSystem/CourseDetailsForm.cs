@@ -147,6 +147,11 @@ namespace MelodyMusicSystem
 
         private void cboCOID_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            btnAdd.Enabled = false;
+            btnUpdate.Enabled = true;
+            btnDelete.Enabled = true;
+            
             string connectionString, commandString;
             connectionString =
                 "Data Source=DESKTOP-OCRRRLB\\SQLEXPRESS;Initial Catalog=Melody;Integrated Security=True";
@@ -184,6 +189,10 @@ namespace MelodyMusicSystem
             txtDivision.Text = "";
             txtDuration.Text = "";
             txtFee.Text = "";
+            
+            btnAdd.Enabled = true;
+            btnUpdate.Enabled = false;
+            btnDelete.Enabled = false;
         }
         
         private bool ValidateFields()

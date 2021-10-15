@@ -143,6 +143,10 @@ namespace MelodyMusicSystem
             dtpDOB.Value = System.DateTime.Now;
             txtContact.Text = "";
             txtAge.Text = "";
+            
+            btnAdd.Enabled = true;
+            btnUpdate.Enabled = false;
+            btnDelete.Enabled = false;
         }
 
         private bool ValidateFields()
@@ -190,6 +194,11 @@ namespace MelodyMusicSystem
 
         private void cboRegNo_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+            btnAdd.Enabled = false;
+            btnUpdate.Enabled = true;
+            btnDelete.Enabled = true;
+            
             string connectionString, commandString;
             connectionString =
                 "Data Source=DESKTOP-OCRRRLB\\SQLEXPRESS;Initial Catalog=Melody;Integrated Security=True";
